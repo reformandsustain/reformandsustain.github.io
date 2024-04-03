@@ -9,13 +9,24 @@
         border: none;
       }
     </style>
-    <script src="jquery-3.7.1.min.js"></script>
+    <!--<script src="jquery-3.7.1.min.js"></script>-->
     <script src="iframeResizer.min.js"></script>
   </head>
   <body style="margin: 0;">
     <iframe id="reformandsustainIframe" referrerpolicy="no-referrer" src="https://www.reformandsustain.org/"></iframe>
     <script>
-      iFrameResize({ log: true }, '#reformandsustainIframe')
+      iFrameResize({
+        log: true,
+        checkOrigin: false,
+        tolerance: 0,
+        heightCalculationMethod: 'lowestElement',
+        minHeight: 500,
+        resizedCallback: (messageData) => {
+          console.error('[IframeOnload][resizedCallback()]:', JSON.stringify(messageData, null, 2));
+        },
+        inPageLinks: true,
+        interval: 300
+      }, '#reformandsustainIframe')
     </script>
   </body>
 </html>
