@@ -22,7 +22,10 @@
         sizeWidth: true
       }, '#reformandsustainIframe')
 
-      window.setInterval( function() {_resizeobj.resize()}, 5000 );
+      window.setInterval( function(resizeobj) {
+        console.log('forcing resize');
+        resizeobj.resize();
+      }, 5000, _resizeobj );
     </script>
   </body>
 </html>
