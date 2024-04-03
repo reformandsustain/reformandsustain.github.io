@@ -2,8 +2,19 @@
   <head>
     <title>Local Environmental Activism | Reform and Sustain</title>
     <meta name="description" content="Reform &amp; Sustain provides local SoCal volunteer opportunities to those who wish to get involved with the environmental movement. We host sustainable events, organize rallies for policy change and hold weekly meetings to re-charge and get inspired."/>
+    <style>
+      iframe {
+        width: 1px;
+        min-width: 100%;
+        border: none;
+      }
+    </style>
+    <script src="/js/iframeResizer.min.js"></script>
   </head>
   <body style="margin: 0;">
-    <iframe style="width: 100%; height: 100%; border: none;" referrerpolicy="no-referrer" src="https://www.reformandsustain.org/"></iframe>
+    <iframe id="reformandsustainIframe" referrerpolicy="no-referrer" src="https://www.reformandsustain.org/"></iframe>
+    <script>
+      iFrameResize({ log: true }, '#reformandsustainIframe')
+    </script>
   </body>
 </html>
