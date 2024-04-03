@@ -14,16 +14,15 @@
   <body style="margin: 0;">
     <iframe id="reformandsustainIframe" referrerpolicy="no-referrer" src="https://www.reformandsustain.org/"></iframe>
     <script>
-      var _resizeobj = iFrameResize({
+      window.setInterval( function() {
+        console.log('forcing resize');
+        var _resizeobj = iFrameResize({
         log: true,
         inPageLinks: true,
         scrolling: true,
         sizeWidth: true
       }, '#reformandsustainIframe')
-
-      window.setInterval( function(resizeobj) {
-        console.log('forcing resize');
-        resizeobj.resize();
+        _resizeobj.resize();
       }, 5000, _resizeobj );
     </script>
   </body>
