@@ -20,12 +20,13 @@
         checkOrigin: false,
         tolerance: 0,
         heightCalculationMethod: 'lowestElement',
-        minHeight: 500,
+        minHeight: 600,
         resizedCallback: (messageData) => {
           console.error('[IframeOnload][resizedCallback()]:', JSON.stringify(messageData, null, 2));
         },
         inPageLinks: true,
-        interval: 300
+        scrolling: true,
+        interval: 30
       }, '#reformandsustainIframe')
     </script>
   </body>
