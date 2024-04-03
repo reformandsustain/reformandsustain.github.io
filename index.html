@@ -5,5 +5,17 @@
   </head>
   <body style="margin: 0;">
     <iframe style="width: 100%; height: 100%; border: none;" referrerpolicy="no-referrer" src="https://www.reformandsustain.org/"></iframe>
+    <script>
+      window.setTimeout( function() {
+        console.log('forcing resize');
+        iFrameResize({
+          log: true,
+          inPageLinks: true,
+          scrolling: true,
+          sizeWidth: true
+        }, '#reformandsustainIframe');
+        _resizeobj.resize();
+      }, 5000 );
+    </script>
   </body>
 </html>
